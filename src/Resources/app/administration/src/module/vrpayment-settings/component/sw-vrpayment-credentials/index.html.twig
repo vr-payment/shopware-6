@@ -1,0 +1,92 @@
+{% block vrpayment_settings_content_card_channel_config_credentials %}
+	<sw-card
+			class="sw-card"
+			:title="$tc('vrpayment-settings.settingForm.credentials.cardTitle')"
+			v-if="actualConfigData"
+	>
+
+		{% block vrpayment_settings_content_card_channel_config_credentials_card_container %}
+			<sw-container>
+
+				{% block vrpayment_settings_content_card_channel_config_credentials_card_container_settings %}
+					<div v-if="actualConfigData" class="vrpayment-settings-credentials-fields">
+
+						{% block vrpayment_settings_content_card_channel_config_credentials_card_container_settings_space_id %}
+							<sw-inherit-wrapper
+									v-model:value="actualConfigData[CONFIG_SPACE_ID]"
+									:inheritedValue="selectedSalesChannelId === null ? null : allConfigs['null'][CONFIG_SPACE_ID]"
+									:customInheritationCheckFunction="checkNumberFieldInheritance">
+								<template #content="props">
+									<sw-number-field
+											:name="CONFIG_SPACE_ID"
+											:required="true"
+											:mapInheritance="props"
+											:label="$tc('vrpayment-settings.settingForm.credentials.spaceId.label')"
+											:helpText="$tc('vrpayment-settings.settingForm.credentials.spaceId.tooltipText')"
+											:disabled="props.isInherited || !acl.can('vrpayment.editor')"
+											:value="props.currentValue"
+											:error="spaceIdErrorState"
+											@update:value="props.updateCurrentValue">
+									</sw-number-field>
+								</template>
+							</sw-inherit-wrapper>
+						{% endblock %}
+
+						{% block vrpayment_settings_content_card_channel_config_credentials_card_container_settings_user_id %}
+							<sw-inherit-wrapper
+									v-model:value="actualConfigData[CONFIG_USER_ID]"
+									:inheritedValue="selectedSalesChannelId === null ? null : allConfigs['null'][CONFIG_USER_ID]"
+									:customInheritationCheckFunction="checkNumberFieldInheritance">
+								<template #content="props">
+									<sw-number-field
+											:name="CONFIG_USER_ID"
+											:required="true"
+											:mapInheritance="props"
+											:label="$tc('vrpayment-settings.settingForm.credentials.userId.label')"
+											:helpText="$tc('vrpayment-settings.settingForm.credentials.userId.tooltipText')"
+											:disabled="props.isInherited || !acl.can('vrpayment.editor')"
+											:value="props.currentValue"
+											:error="userIdErrorState"
+											@update:value="props.updateCurrentValue">
+									</sw-number-field>
+								</template>
+							</sw-inherit-wrapper>
+						{% endblock %}
+
+						{% block vrpayment_settings_content_card_channel_config_credentials_card_container_settings_application_key %}
+							<sw-inherit-wrapper
+									v-model:value="actualConfigData[CONFIG_APPLICATION_KEY]"
+									:inheritedValue="selectedSalesChannelId === null ? null : allConfigs['null'][CONFIG_APPLICATION_KEY]"
+									:customInheritationCheckFunction="checkTextFieldInheritance">
+								<template #content="props">
+									<sw-password-field
+											:name="CONFIG_APPLICATION_KEY"
+											:required="true"
+											:passwordToggleAble="true"
+											:mapInheritance="props"
+											:label="$tc('vrpayment-settings.settingForm.credentials.applicationKey.label')"
+											:helpText="$tc('vrpayment-settings.settingForm.credentials.applicationKey.tooltipText')"
+											:disabled="props.isInherited || !acl.can('vrpayment.editor')"
+											:value="props.currentValue"
+											:error="applicationKeyErrorState"
+											@update:value="props.updateCurrentValue">
+									</sw-password-field>
+								</template>
+							</sw-inherit-wrapper>
+						{% endblock %}
+					</div>
+				{% endblock %}
+
+				<sw-container columns="1fr 1fr" gap="0px 30px">
+					<sw-button-process
+							:isLoading="isTesting"
+							@click="emitCheckApiConnectionEvent">
+						{{ $tc('vrpayment-settings.settingForm.credentials.button.label') }}
+					</sw-button-process>
+				</sw-container>
+
+			</sw-container>
+		{% endblock %}
+	</sw-card>
+
+{% endblock %}

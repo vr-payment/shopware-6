@@ -1,0 +1,105 @@
+{
+  "sw-privileges": {
+	"permissions": {
+	  "parents": {
+		"vrpayment": "VRPayment plugin"
+	  },
+	  "vrpayment": {
+		"label": "VRPayment berechtigungen"
+	  }
+	}
+  },
+  "vrpayment-settings": {
+	"general": {
+	  "descriptionTextModule": "VRPayment-Einstellungen",
+	  "mainMenuItemGeneral": "VRPayment"
+	},
+	"header": "VRPayment",
+	"messageNotBlank": "Dieser Wert sollte nicht leer sein.",
+	"salesChannelCard": {
+	  "button": {
+		"description": "Klicken Sie auf diese Schaltfläche, um VRPayment als Standard-Zahlungsabwickler im ausgewählten Vertriebskanal festzulegen",
+		"label": "VRPayment als Standard-Zahlungsabwickler festlegen"
+	  },
+	  "messageDefaultPaymentError": "VRPayment als Standard-Zahlungsabwickler konnte nicht festgelegt werden..",
+	  "messageDefaultPaymentUpdated": "VRPayment als Standard-Zahlungsabwickler wurde festgelegt."
+	},
+	"settingForm": {
+	  "credentials": {
+		"applicationKey": {
+		  "label": "Application Key",
+		  "tooltipText": "Der Anwendungsschlüssel wird verwendet, um dieses Plugin mit der API VRPayment zu authentifizieren."
+		},
+		"cardTitle": "Anmeldedaten",
+		"spaceId": {
+		  "label": "Space ID",
+		  "tooltipText": "Die Space ID wird verwendet, um dieses Plugin mit der API VRPayment zu authentifizieren."
+		},
+		"userId": {
+		  "label": "User ID",
+		  "tooltipText": "Die Benutzer-ID wird verwendet, um dieses Plugin mit der VRPayment-API zu authentifizieren."
+		},
+		"button": {
+		  "description": "Klicken Sie auf diese Schaltfläche, um die VRPayment API zu testen",
+		  "label": "API Verbindung testen"
+		},
+		"alert": {
+		  "title": "API-Test",
+		  "successMessage": "Die Verbindung wurde erfolgreich getestet.",
+		  "errorMessage": "Die Verbindung ist fehlgeschlagen. Versuchen Sie es erneut."
+		}
+	  },
+	  "messageSaveSuccess": "VRPayment-Einstellungen wurden gespeichert.",
+	  "messageOrderDeliveryStateError": "VRPayment OrderDeliveryState konnte nicht gespeichert werden.",
+	  "messageOrderDeliveryStateUpdated": "VRPayment OrderDeliveryState wurde aktualisiert.",
+	  "messagePaymentMethodConfigurationError": "VRPayment PaymentMethodConfiguration konnte nicht gespeichert werden. Bitte überprüfen Sie Ihre Anmeldedaten.",
+	  "messagePaymentMethodConfigurationUpdated": "VRPayment PaymentMethodConfiguration wurde registriert.",
+	  "messageWebHookError": "VRPayment WebHook konnte nicht gespeichert werden. Bitte überprüfen Sie Ihre Zugangsdaten.",
+	  "messageWebHookUpdated": "VRPayment WebHook wurde aktualisiert.",
+	  "options": {
+		"cardTitle": "Optionen",
+		"emailEnabled": {
+		  "label": "Auftragsbestätigung per E-Mail senden",
+		  "tooltipText": "Wenn diese Einstellung aktiviert ist, erhalten Ihre Kunden eine E-Mail von Ihrem Geschäft, wenn die Zahlung ihrer Bestellung autorisiert ist."
+		},
+		"integration": {
+		  "label": "Integration",
+		  "options": {
+			"iframe": "Iframe",
+			"payment_page": "Payment Page"
+		  },
+		  "tooltipText": "Integration"
+		},
+		"lineItemConsistencyEnabled": {
+		  "label": "Konsistenz der Einzelposten",
+		  "tooltipText": "Wenn diese Option aktiviert ist, stimmen die Summen der Einzelposten in VRPaymentPayment immer mit der Shopware-Bestellsumme überein."
+		},
+		"spaceViewId": {
+		  "label": "Space View ID",
+		  "tooltipText": "Space View ID"
+		}
+	  },
+	  "save": "Speichern",
+	  "storefrontOptions": {
+		"cardTitle": "Storefront-Optionen",
+		"invoiceDownloadEnabled": {
+		  "label": "Rechnung Download",
+		  "tooltipText": "Wenn diese Einstellung aktiviert ist, können Ihre Kunden Auftragsrechnungen von VRPayment herunterladen."
+		}
+	  },
+	  "advancedOptions": {
+		"cardTitle": "Erweiterte-Optionen",
+		"webhooksUpdateEnabled": {
+			"label": "Webhooks-Update",
+			"tooltipText": "Wenn diese Einstellung aktiviert ist, wird das Webhook-Update ausgelöst, wenn Sie die Einstellungen speichern"
+		},
+	    "paymentsUpdateEnabled": {
+		  "label": "Payments-Update",
+		  "tooltipText": "Wenn diese Einstellung aktiviert ist, wird die Aktualisierung der Zahlungsmethoden ausgelöst, wenn Sie die Einstellungen speichern"
+	    }
+	  },
+	  "titleError": "Fehler",
+	  "titleSuccess": "Erfolg"
+	}
+  }
+}

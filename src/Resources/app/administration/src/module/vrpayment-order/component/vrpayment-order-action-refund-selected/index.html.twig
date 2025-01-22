@@ -1,0 +1,16 @@
+{% block vrpayment_order_action_refund_selected %}
+<sw-modal variant="small"
+		  :title="$tc(`vrpayment-order.modal.title.refund`)"
+		  @modal-close="$emit('modal-close')">
+
+	{% block vrpayment_order_action_refund_confirm_button_selected %}
+	<template #modal-footer>
+		<sw-button variant="primary" @click="refundSelected()">
+			{{ $tc('vrpayment-order.refundAction.confirmButton.text') }}
+		</sw-button>
+	</template>
+	{% endblock %}
+
+	<sw-loader v-if="isLoading"></sw-loader>
+</sw-modal>
+{% endblock %}
