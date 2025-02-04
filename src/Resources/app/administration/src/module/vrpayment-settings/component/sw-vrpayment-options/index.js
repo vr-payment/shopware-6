@@ -42,12 +42,12 @@ Component.register('sw-vrpayment-options', {
 		integrationOptions() {
 			return [
 				{
-					id: 'iframe',
-					name: this.$tc('vrpayment-settings.settingForm.options.integration.options.iframe')
-				},
-				{
 					id: 'payment_page',
 					name: this.$tc('vrpayment-settings.settingForm.options.integration.options.payment_page')
+				},
+				{
+					id: 'iframe',
+					name: this.$tc('vrpayment-settings.settingForm.options.integration.options.iframe')
 				}
 			];
 		}
