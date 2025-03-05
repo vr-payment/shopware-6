@@ -73,7 +73,7 @@ tail -f var/log/vrpayment_payment*.log
 
 ## Documentation
 
-[Documentation](https://gateway.vr-payment.de/doc/shopware-6/6.1.11/docs/en/documentation.html)
+[Documentation](https://gateway.vr-payment.de/doc/shopware-6/6.1.12/docs/en/documentation.html)
 
 ## License
 
