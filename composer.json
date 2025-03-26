@@ -2,7 +2,7 @@
   "authors": [
 	{
 	  "homepage": "https://www.vr-payment.de/",
-	  "name": "VRPay"
+	  "name": "VR Payment"
 	}
   ],
   "autoload": {
@@ -12,7 +12,7 @@
   },
   "description": "VRPayment integration for Shopware 6",
   "extra": {
-	"copyright": "(c) by VRPay",
+	"copyright": "(c) by VR Payment",
 	"description": {
 	  "de-DE": "VRPayment integration für Shopware 6",
 	  "en-GB": "VRPayment integration for Shopware 6",
@@ -41,7 +41,7 @@
   },
   "homepage": "https://www.vr-payment.de//",
   "keywords": [
-	"VRPay",
+	"VR Payment",
 	"payment",
 	"php",
 	"shopware"

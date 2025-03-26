@@ -1,9 +1,9 @@
 
 
-VRPayment Payment for Shopware 6
+VR Payment Integration for Shopware 6
 =============================
 
-The VRPayment Payment plugin wraps around the VRPayment API. This library facilitates your interaction with various services such as transactions.
+The VR Payment plugin wraps around the VR Payment API. This library facilitates your interaction with various services such as transactions.
 Please note that this plugin is for versions 6.5 and 6.6. For the 6.4 plugin please visit [our Shopware 6.4 plugin](https://github.com/vr-payment/shopware-6-4).
 
 ## Requirements
@@ -55,13 +55,13 @@ Uncompress the zip file you download, and include the autoloader in your project
 # unzip to ShopwareInstallDir/custom/plugins/VRPaymentPayment
 # For versions 6.1.10 and older, the SDK is installed automatically when installing the plugin in the shop, so you don't need to
 # run the following command.
-composer require vrpayment/sdk 4.6.0
+composer require vrpayment/sdk 4.8.0
 php bin/console plugin:refresh
 php bin/console plugin:install --activate --clearCache VRPaymentPayment
 ```
 
 ## Usage
-The library needs to be configured with your account's space id, user id, and application key which are available in your VRPayment
+The library needs to be configured with your account's space id, user id, and application key which are available in your VR Payment
 account dashboard.
 
 ### Logs and debugging

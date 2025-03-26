@@ -148,7 +148,7 @@
 - Added settings to control update of webhooks and payment methods
 
 # 4.0.15
-- Adjust VRPay/SW6 documentation - how to do refunds
+- Adjust VR Payment/SW6 documentation - how to do refunds
 
 # 4.0.14
 - Support for Shopware 6.4.6
