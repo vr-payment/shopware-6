@@ -1,9 +1,0 @@
-monolog:
-    channels: ['vrpayment_payment']
-    handlers:
-        security:
-            # log all messages (since debug is the lowest level)
-            level: debug
-            type: stream
-            path: '%kernel.logs_dir%/vrpayment.log'
-            channels: [ 'vrpayment_payment' ]
