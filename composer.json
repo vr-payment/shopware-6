@@ -1,0 +1,63 @@
+{
+  "authors": [
+	{
+	  "homepage": "https://www.vr-payment.de/",
+	  "name": "VR Payment"
+	}
+  ],
+  "autoload": {
+	"psr-4": {
+	  "VRPaymentPayment\\": "src/"
+	}
+  },
+  "description": "VRPayment integration for Shopware 6",
+  "extra": {
+	"copyright": "(c) by VR Payment",
+	"description": {
+	  "de-DE": "VRPayment integration für Shopware 6",
+	  "en-GB": "VRPayment integration for Shopware 6",
+	  "fr-FR": "Intégration de VRPayment pour Shopware 6",
+      "it-IT": "Integrazione VRPayment per Shopware"
+	},
+	"label": {
+	  "de-DE": "VRPayment Produkte für Shopware 6",
+	  "en-GB": "VRPayment Products for Shopware 6",
+	  "fr-FR": "VRPayment Produits for Shopware 6",
+	  "it-IT": "VRPayment Prodotti per Shopware 6"
+	},
+	"manufacturerLink": {
+	  "de-DE": "https://www.vr-payment.de/",
+	  "en-GB": "https://www.vr-payment.de/",
+	  "fr-FR": "https://www.vr-payment.de/",
+      "it-IT": "https://www.vr-payment.de/"
+	},
+	"supportLink": {
+	  "de-DE": "https://www.vr-payment.de/hotline",
+	  "en-GB": "https://www.vr-payment.de/hotline",
+	  "fr-FR": "https://www.vr-payment.de/hotline",
+      "it-IT": "https://www.vr-payment.de/hotline"
+	},
+	"shopware-plugin-class": "VRPaymentPayment\\VRPaymentPayment"
+  },
+  "homepage": "https://www.vr-payment.de//",
+  "keywords": [
+	"VR Payment",
+	"payment",
+	"php",
+	"shopware"
+  ],
+  "license": "Apache-2.0",
+  "name": "vrpayment/shopware-6",
+  "require": {
+	"ext-curl": "*",
+	"ext-json": "*",
+	"ext-mbstring": "*",
+	"php": ">=8.2",
+    "shopware/core": "~6.7.0",
+    "shopware/administration": "~6.7.0",
+    "shopware/storefront":"~6.7.0",
+    "vrpayment/sdk": "^4.0.0"
+  },
+  "type": "shopware-platform-plugin",
+  "version": "7.0.1"
+}
