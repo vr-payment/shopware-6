@@ -29,7 +29,7 @@
         payment_method_handler_status: 'input[name="vrpayment_payment_handler_validation_status"]',
         payment_form_id: 'confirmOrderForm',
         button_cancel_id: 'vrpaymentOrderCancel',
-        // button_home_override: 'vrpaymentHomeLink',
+        button_home_override: 'vrpaymentHomeLink',
         loader_id: 'vrpaymentLoader',
         checkout_url: null,
         checkout_url_id: 'checkoutUrl',
@@ -46,7 +46,7 @@
             this.cart_recreate_url = document.getElementById(this.cart_recreate_url_id).value;
 
             document.getElementById(this.button_cancel_id).addEventListener('click', this.recreateCart, false);
-            // document.getElementById(this.button_home_override).addEventListener('click', this.recreateCart, false);
+            document.getElementById(this.button_home_override).addEventListener('click', this.recreateCart, false);
             document.getElementById(this.payment_form_id).addEventListener('submit', this.submitPayment, false);
 
             VRPaymentCheckout.getIframe();
