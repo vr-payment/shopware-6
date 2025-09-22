@@ -28,24 +28,24 @@ Please note that this plugin is for versions 6.5, 6.6 or 6.7. For the 6.4 plugin
 Copy
 composer require vrpayment/shopware-6
 php bin/console plugin:refresh
-php bin/console plugin:install --activate --clearCache VRPaymentPayment
+php bin/console plugin:install --activate --clearCache VRPayment
 ```
 
 ### Manual Installation
 
 1. Download the latest [Release](../../releases)
-2. Extract the ZIP to custom/plugins/VRPaymentPayment.
+2. Extract the ZIP to custom/plugins/VRPayment.
 
 ```bash
 Copy
 bin/console plugin:refresh  
-bin/console plugin:install --activate --clearCache VRPaymentPayment  
+bin/console plugin:install --activate --clearCache VRPayment
 ```
 
 ## Configuration
 ### API Credentials
 
-1. Navigate to Shopware Admin > Settings > VRPayment Payment.
+1. Navigate to Shopware Admin > Settings > VRPayment.
 2. Enter your Space ID, User ID, and API Key (obtained from the [VR Payment Portal](https://gateway.vr-payment.de/)).
 
 ### Payment Methods
@@ -78,7 +78,7 @@ ________________________________________________________________________________
 
 ```bash
 Copy
-tail -f var/log/vrpayment_payment*.log
+tail -f var/log/vrpayment*.log
 ```
 ### Common Issues:
 
