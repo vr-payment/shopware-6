@@ -1,0 +1,11 @@
+{
+  "main.js": {
+    "file": "assets/v-r-payment-payment-VI5R5y0b.js",
+    "name": "v-r-payment-payment",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/v-r-payment-payment-D4AH6HY2.css"
+    ]
+  }
+}

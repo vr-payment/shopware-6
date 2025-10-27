@@ -1,0 +1,25 @@
+{
+  "base": "/bundles/vrpaymentpayment/administration/",
+  "entryPoints": {
+    "v-r-payment-payment": {
+      "css": [
+        "/bundles/vrpaymentpayment/administration/assets/v-r-payment-payment-D4AH6HY2.css"
+      ],
+      "dynamic": [],
+      "js": [
+        "/bundles/vrpaymentpayment/administration/assets/v-r-payment-payment-VI5R5y0b.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}
