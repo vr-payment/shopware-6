@@ -33,19 +33,19 @@ class Migration1605701048TransactionEntity extends MigrationStep
 
         try {
             $connection->executeStatement('
-                ALTER TABLE `vrpayment_transaction`
+                ALTER TABLE `vrpayment_transaction_tmp`
                     ADD `order_version_id` binary(16) NOT NULL AFTER `transaction_id`;
             ');
 
             $connection->executeStatement('
-                UPDATE `vrpayment_transaction` t1
+                UPDATE `vrpayment_transaction_tmp` t1
                     INNER JOIN `order` t2
                         ON t1.order_id = t2.id
                     SET t1.order_version_id = t2.version_id;
             ');
 
             $connection->executeStatement('
-                ALTER TABLE `vrpayment_transaction`
+                ALTER TABLE `vrpayment_transaction_tmp`
                     DROP FOREIGN KEY `fk.vrp_transaction.order_id`,
                     DROP FOREIGN KEY `fk.vrp_transaction.order_transaction_id`,
                     DROP FOREIGN KEY `fk.vrp_transaction.payment_method_id`,
@@ -53,7 +53,7 @@ class Migration1605701048TransactionEntity extends MigrationStep
             ');
 
             $connection->executeStatement('
-                ALTER TABLE `vrpayment_transaction`
+                ALTER TABLE `vrpayment_transaction_tmp`
                     ADD CONSTRAINT `fk.vrp_transaction_order_id` FOREIGN KEY (`order_id`, `order_version_id`)
                         REFERENCES `order` (`id`, `version_id`) ON DELETE CASCADE ON UPDATE CASCADE,
                     ADD CONSTRAINT `fk.vrp_transaction_payment_method_id` FOREIGN KEY (`payment_method_id`)
