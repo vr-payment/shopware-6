@@ -32,7 +32,7 @@ use VRPaymentPayment\Core\Api\Refund\Entity\RefundEntityDefinition;
  */
 class TransactionEntityDefinition extends EntityDefinition {
 
-	public const ENTITY_NAME = 'vrpayment_transaction';
+	public const ENTITY_NAME = 'vrpayment_transaction_data';
 
 	/**
 	 * @return string

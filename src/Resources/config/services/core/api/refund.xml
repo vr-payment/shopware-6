@@ -10,6 +10,7 @@
 		<service id="VRPaymentPayment\Core\Api\Refund\Controller\RefundController" public="true">
 			<argument type="service" id="VRPaymentPayment\Core\Api\Refund\Service\RefundService"/>
 			<argument type="service" id="VRPaymentPayment\Core\Settings\Service\SettingsService"/>
+			<argument type="service" id="VRPaymentPayment\Core\Api\Transaction\Service\TransactionService"/>
 			<call method="setLogger">
 				<argument type="service" id="monolog.logger.vrpayment_payment"/>
 			</call>

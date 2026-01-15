@@ -13,11 +13,10 @@ The VR Payment Payment Plugin integrates modern payment processing into Shopware
 - **VR Payment Account:** Obtain `Space ID`, `User ID`, and `API Key` from the [VR Payment Dashboard](https://gateway.vr-payment.de/).
 
 ## Documentation
-
-- For English documentation click [here](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.1.17/docs/en/documentation.html)
-- Für die deutsche Dokumentation klicken Sie [hier](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.1.17/docs/de/documentation.html)
-- Pour la documentation Française, cliquez [ici](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.1.17/docs/fr/documentation.html)
-- Per la documentazione in tedesco, clicca [qui](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.1.17/docs/it/documentation.html)
+- For English documentation click [here](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.0/docs/en/documentation.html)
+- Für die deutsche Dokumentation klicken Sie [hier](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.0/docs/de/documentation.html)
+- Pour la documentation Française, cliquez [ici](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.0/docs/fr/documentation.html)
+- Per la documentazione in tedesco, clicca [qui](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.0/docs/it/documentation.html)
 
 ## Installation
 
@@ -41,6 +40,22 @@ php bin/console plugin:install --activate --clearCache VRPaymentPayment
 Copy
 bin/console plugin:refresh  
 bin/console plugin:install --activate --clearCache VRPaymentPayment  
+```
+
+## Update
+
+### Via Administration
+1. Go to Shopware Admin > Extensions > My extensions.
+2. Find VRPaymentPayment.
+3. Click Update.
+
+### Via CLI
+1. Deploy the new plugin files (replace the folder in custom/plugins/VRPaymentPayment or upload/install a new ZIP).
+2. Run:
+```bash
+bin/console plugin:refresh
+bin/console plugin:update --clearCache VRPaymentPayment
+bin/console cache:clear
 ```
 
 ## Configuration
