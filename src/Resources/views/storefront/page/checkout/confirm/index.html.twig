@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/page/checkout/confirm/index.html.twig' %}
+
+{% block base_body_script %}
+    {{ parent() }}
+
+    {# Provide WhitelabelMachineName integration data if available in page extensions #}
+    {% if page.extensions.vRPaymentData %}
+        {% set vrpData = page.extensions.vRPaymentData %}
+
+        {# Hidden inputs required by the JS components #}
+        <input type="hidden" id="cartRecreateUrl" value="{{ vrpData.cartRecreateUrl }}" />
+        <input type="hidden" id="checkoutUrl" value="{{ vrpData.checkoutUrl }}" />
+
+        {# Load WhitelabelMachineName SDK scripts #}
+        {% if vrpData.deviceJavascriptUrl %}
+            <script src="{{ vrpData.deviceJavascriptUrl }}" async="async"></script>
+        {% endif %}
+        {% if vrpData.javascriptUrl %}
+            <script src="{{ vrpData.javascriptUrl }}"></script>
+        {% endif %}
+
+        {# We don't need app.js if we use the modern plugin, but we might keep it for now if other pages depend on it.
+           However, for the confirm page, the modern plugin registered in main.js will take over
+           whenever it finds [data-vrpayment-checkout-plugin]. #}
+    {% endif %}
+{% endblock %}
