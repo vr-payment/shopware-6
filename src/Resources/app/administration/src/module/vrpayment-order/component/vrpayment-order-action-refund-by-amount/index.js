@@ -79,6 +79,9 @@ Component.register('vrpayment-order-action-refund-by-amount', {
 						case 'refundExceedsAmount':
 							errorMessage = this.$tc('vrpayment-order.refundAction.refundCreateError.messageRefundAmountExceedsAvailableBalance');
 						break;
+						case 'methodDoesNotSupportRefund':
+							errorMessage = this.$tc('vrpayment-order.refundAction.refundCreateError.messagePaymentMethodDoesNotSupportRefund');
+						break;
 						default:
 							errorMessage = errorResponse.response.data.errors[0].detail;
 					}
