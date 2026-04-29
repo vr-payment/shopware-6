@@ -41,6 +41,7 @@ Component.register('vrpayment-settings', {
 
             isSetDefaultPaymentSuccessful: false,
             isSettingDefaultPaymentMethods: false,
+            selectedSalesChannelId: null,
 
             configIntegrationDefaultValue: 'payment_page',
             configEmailEnabledDefaultValue: true,
@@ -70,7 +71,7 @@ Component.register('vrpayment-settings', {
         config: {
             handler(configData) {
                 const defaultConfig = (this.$refs.configComponent.allConfigs || {}).null || {};
-                const salesChannelId = this.$refs.configComponent.selectedSalesChannelId;
+                const salesChannelId = this.selectedSalesChannelId;
                 if (salesChannelId === null) {
 
                     this.applicationKeyFilled = !!this.config[this.CONFIG_APPLICATION_KEY];
@@ -137,6 +138,16 @@ Component.register('vrpayment-settings', {
                 this.$emit('update:value', configData);
             },
             deep: true
+        },
+
+        selectedSalesChannelId: {
+            handler(newValue) {
+                this.$nextTick(() => {
+                    if (this.$refs.channelSwitch) {
+                        this.$refs.channelSwitch.salesChannelId = newValue || '';
+                    }
+                });
+            }
         }
     },
 
@@ -198,7 +209,7 @@ Component.register('vrpayment-settings', {
         },
 
         async validateHeadlessIntegration() {
-            const salesChannelId = this.$refs.configComponent.selectedSalesChannelId;
+            const salesChannelId = this.selectedSalesChannelId;
             const currentIntegration = this.config[this.CONFIG_INTEGRATION];
 
             // If integration is 'payment_page', it is always valid.
@@ -270,7 +281,7 @@ Component.register('vrpayment-settings', {
                 return false;
             }
 
-            this.VRPaymentConfigurationService.registerWebHooks(this.$refs.configComponent.selectedSalesChannelId)
+            this.VRPaymentConfigurationService.registerWebHooks(this.selectedSalesChannelId)
                 .then(() => {
                     this.createNotificationSuccess({
                         title: this.$tc('vrpayment-settings.settingForm.titleSuccess'),
@@ -291,7 +302,7 @@ Component.register('vrpayment-settings', {
                 return false;
             }
 
-            this.VRPaymentConfigurationService.synchronizePaymentMethodConfiguration(this.$refs.configComponent.selectedSalesChannelId)
+            this.VRPaymentConfigurationService.synchronizePaymentMethodConfiguration(this.selectedSalesChannelId)
                 .then(() => {
                     this.createNotificationSuccess({
                         title: this.$tc('vrpayment-settings.settingForm.titleSuccess'),
@@ -328,7 +339,7 @@ Component.register('vrpayment-settings', {
         onSetPaymentMethodDefault() {
             this.isSettingDefaultPaymentMethods = true;
             this.VRPaymentConfigurationService.setVRPaymentAsSalesChannelPaymentDefault(
-                this.$refs.configComponent.selectedSalesChannelId
+                this.selectedSalesChannelId
             ).then(() => {
                 this.isSettingDefaultPaymentMethods = false;
                 this.isSetDefaultPaymentSuccessful = true;
@@ -385,6 +396,13 @@ Component.register('vrpayment-settings', {
                     });
                     this.isTesting = false;
                 });
+        },
+
+        onSalesChannelSwitchChange(id, onInput) {
+            this.selectedSalesChannelId = id;
+            if (typeof onInput === 'function') {
+                onInput(id);
+            }
         }
     }
 });
