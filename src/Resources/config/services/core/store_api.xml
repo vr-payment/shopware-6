@@ -18,6 +18,7 @@
 
 		<service id="VRPaymentPayment\Core\Checkout\StoreApi\Route\CartRecoveryRoute">
 			<argument type="service" id="VRPaymentPayment\Core\Checkout\Service\CartRecoveryService"/>
+			<argument type="service" id="VRPaymentPayment\Core\Api\Transaction\Service\TransactionService"/>
 		</service>
 
 		<service id="VRPaymentPayment\Core\Checkout\StoreApi\Route\InvoiceRoute">
