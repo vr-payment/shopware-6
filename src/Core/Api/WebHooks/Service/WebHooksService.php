@@ -71,7 +71,7 @@ class WebHooksService {
 		/**
 		 * Transaction WebHook Entity Id
 		 *
-		 * @link https://www.vr-payment.de//doc/api/webhook-entity/view/1472041829003
+		 * @link https://www.vr-payment.de/doc/api/webhook-entity/view/1472041829003
 		 */
 		[
 			'id'                => WebHooksService::TRANSACTION,
@@ -91,7 +91,7 @@ class WebHooksService {
 		/**
 		 * Transaction Invoice WebHook Entity Id
 		 *
-		 * @link https://www.vr-payment.de//doc/api/webhook-entity/view/1472041816898
+		 * @link https://www.vr-payment.de/doc/api/webhook-entity/view/1472041816898
 		 */
 		[
 			'id'                => WebHooksService::TRANSACTION_INVOICE,
@@ -106,7 +106,7 @@ class WebHooksService {
 		/**
 		 * Refund WebHook Entity Id
 		 *
-		 * @link https://www.vr-payment.de//doc/api/webhook-entity/view/1472041839405
+		 * @link https://www.vr-payment.de/doc/api/webhook-entity/view/1472041839405
 		 */
 		[
 			'id'                => WebHooksService::REFUND,
@@ -120,7 +120,7 @@ class WebHooksService {
 		/**
 		 * Payment Method Configuration Id
 		 *
-		 * @link https://www.vr-payment.de//doc/api/webhook-entity/view/1472041857405
+		 * @link https://www.vr-payment.de/doc/api/webhook-entity/view/1472041857405
 		 */
 		[
 			'id'                => WebHooksService::PAYMENT_METHOD_CONFIGURATION,

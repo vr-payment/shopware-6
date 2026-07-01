@@ -13,10 +13,10 @@ The VR Payment Payment Plugin integrates modern payment processing into Shopware
 - **VR Payment Account:** Obtain `Space ID`, `User ID`, and `API Key` from the [VR Payment Dashboard](https://gateway.vr-payment.de/).
 
 ## Documentation
-- For English documentation click [here](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.3/docs/en/documentation.html)
-- Für die deutsche Dokumentation klicken Sie [hier](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.3/docs/de/documentation.html)
-- Pour la documentation Française, cliquez [ici](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.3/docs/fr/documentation.html)
-- Per la documentazione in tedesco, clicca [qui](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.3/docs/it/documentation.html)
+- For English documentation click [here](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.4/docs/en/documentation.html)
+- Für die deutsche Dokumentation klicken Sie [hier](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.4/docs/de/documentation.html)
+- Pour la documentation Française, cliquez [ici](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.4/docs/fr/documentation.html)
+- Per la documentazione in tedesco, clicca [qui](https://docs.plugin-documentation.vr-payment.de/vr-payment/shopware-6/6.2.4/docs/it/documentation.html)
 
 ## Installation
 
@@ -82,7 +82,7 @@ Configure supported methods (e.g., credit cards, Apple Pay) via the [VR Payment 
 ___________________________________________________________________________________
 | Shopware 6 version            | Plugin major version   | Supported until        |
 |-------------------------------|------------------------|------------------------|
-| Shopware 6.6.x                | 6.x                    | Further notice         |
+| Shopware 6.6.x                | 6.x                    | December 2026          |
 | Shopware 6.5.x                | 5.x                    | October 2024           |
 -----------------------------------------------------------------------------------
 
