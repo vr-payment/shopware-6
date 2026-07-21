@@ -1,7 +1,7 @@
 {
   "authors": [
 	{
-	  "homepage": "https://www.vr-payment.de/",
+	  "homepage": "https://www.vr-payment.de",
 	  "name": "VR Payment"
 	}
   ],
@@ -26,10 +26,10 @@
 	  "it-IT": "VRPayment Prodotti per Shopware 6"
 	},
 	"manufacturerLink": {
-	  "de-DE": "https://www.vr-payment.de/",
-	  "en-GB": "https://www.vr-payment.de/",
-	  "fr-FR": "https://www.vr-payment.de/",
-      "it-IT": "https://www.vr-payment.de/"
+	  "de-DE": "https://www.vr-payment.de",
+	  "en-GB": "https://www.vr-payment.de",
+	  "fr-FR": "https://www.vr-payment.de",
+      "it-IT": "https://www.vr-payment.de"
 	},
 	"supportLink": {
 	  "de-DE": "https://www.vr-payment.de/hotline",
@@ -39,7 +39,7 @@
 	},
 	"shopware-plugin-class": "VRPaymentPayment\\VRPaymentPayment"
   },
-  "homepage": "https://www.vr-payment.de//",
+  "homepage": "https://www.vr-payment.de/",
   "keywords": [
 	"VR Payment",
 	"payment",
@@ -56,8 +56,8 @@
     "shopware/core": "~6.7.0",
     "shopware/administration": "~6.7.0",
     "shopware/storefront":"~6.7.0",
-    "vrpayment/sdk": "^4.0.0"
+    "vrpayment/sdk": "^4.8.1"
   },
   "type": "shopware-platform-plugin",
-  "version": "7.3.4"
+  "version": "7.3.5"
 }

@@ -3,11 +3,11 @@
   "entryPoints": {
     "v-r-payment-payment": {
       "css": [
-        "/bundles/vrpaymentpayment/administration/assets/v-r-payment-payment-D4AH6HY2.css"
+        "/bundles/vrpaymentpayment/administration/css/v-r-payment-payment.css"
       ],
       "dynamic": [],
       "js": [
-        "/bundles/vrpaymentpayment/administration/assets/v-r-payment-payment-CPfpiGQp.js"
+        "/bundles/vrpaymentpayment/administration/js/v-r-payment-payment.js"
       ],
       "legacy": false,
       "preload": []
@@ -16,10 +16,10 @@
   "legacy": false,
   "metadatas": {},
   "version": [
-    "7.1.0",
+    "7.0.4",
     7,
-    1,
-    0
+    0,
+    4
   ],
   "viteServer": null
 }
