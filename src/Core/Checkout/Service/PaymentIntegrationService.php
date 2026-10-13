@@ -248,6 +248,6 @@ class PaymentIntegrationService
      */
     private function getDeviceJavascriptUrl(int $spaceId): string
     {
-        return 'https://gateway.vr-payment.de/s/' . $spaceId . '/payment/device.js?session=' . Uuid::randomHex();
+        return 'https://gateway.vr-payment.de/s/' . $spaceId . '/payment/device.js?sessionIdentifier=' . Uuid::randomHex();
     }
 }
