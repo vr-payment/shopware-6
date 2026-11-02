@@ -5,7 +5,7 @@ namespace VRPaymentPayment\Core\Util\Traits;
 use Doctrine\DBAL\Connection;
 use Shopware\Core\{
 	Framework\Context,
-	Framework\DataAbstractionLayer\EntityRepositoryInterface,
+	Framework\DataAbstractionLayer\EntityRepository,
 	Framework\DataAbstractionLayer\Search\Criteria,
 	Framework\DataAbstractionLayer\Search\Filter\ContainsFilter,
 	Framework\DataAbstractionLayer\Search\Filter\EqualsFilter,
@@ -40,7 +40,7 @@ trait VRPaymentPaymentPluginTrait {
 	 */
 	protected function getPaymentMethodIds(Context $context): array
 	{
-		/** @var EntityRepositoryInterface $paymentRepository */
+		/** @var EntityRepository $paymentRepository */
 		$paymentRepository = $this->container->get('payment_method.repository');
 		$criteria          = (new Criteria())
 			->addFilter(new EqualsFilter('handlerIdentifier', VRPaymentPaymentHandler::class));
@@ -61,7 +61,7 @@ trait VRPaymentPaymentPluginTrait {
 			'active' => $active,
 		];
 
-		/** @var EntityRepositoryInterface $paymentRepository */
+		/** @var EntityRepository $paymentRepository */
 		$paymentRepository = $this->container->get('payment_method.repository');
 		$paymentRepository->update([$paymentMethod], $context);
 	}
